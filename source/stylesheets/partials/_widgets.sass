@@ -1,0 +1,154 @@
+@import "follow/*.png"
+$follow-sprite-dimensions: true
+
+.widget.HTML .widget-content.search
+  display: none
+
+body.archive, body.index
+  .widget.HTML .widget-content.search
+    display: block
+body.news #content
+  .widget.HTML .widget-content.search
+    display: none
+
+#coc #cic #content
+  .widget
+    margin: 0 0 65px 0
+    h2
+      @extend .yeseva
+      height: 25px
+      line-height: 25px
+      text-align: center
+      background: image-url('h2-bg.png') center bottom no-repeat
+      color: #000
+      font-size: 12px
+      letter-spacing: 3px
+  .section
+    margin: 0
+
+  .widget.Gadget
+    height: auto
+    
+  .widget.HTML
+    margin: 0
+    .widget-content.search
+      overflow: hidden
+      background: #e7e7e7
+      padding: 3px
+      margin-bottom: 20px
+      button
+        background: image-url('search-btn-bg.png')
+        width: image-width('search-btn-bg.png')
+        height: image-height('search-btn-bg.png')
+        border: 0
+        float: left
+        margin-right: 3px
+        margin-top: 4px
+        text-indent: -999px
+      input
+        @extend .josefin
+        float: left
+        width: 106px
+        height: 11px
+        font-size: 11px
+        border: 1px solid #c9cacc
+        padding: 10px 8px
+    .widget-content.follow
+      text-align: center
+      padding-bottom: 21px
+      h2
+        margin-bottom: 13px
+      ul
+        overflow: hidden
+        padding: 0 17px
+        li
+          +all-follow-sprites
+          float: left
+          margin-right: 4px
+          &.last
+            margin-right: 0
+          a
+            display: block
+            
+  .widget.BlogArchive
+    background: #e7e7e7 image-url('archive-bg.png') center top no-repeat
+    padding-top: image-height('archive-bg.png')
+    text-align: center
+    border-bottom: 6px solid #000
+    padding-bottom: 50px
+    h2
+      margin-top: 35px
+      margin-bottom: 23px
+    .widget-content
+      @extend .josefin
+      width: 72px
+      margin: 0 auto
+      .hierarchy
+        text-align: center
+        background: image-url('archive-li-bg.png') center bottom no-repeat
+        color: #444
+        margin: 0 0 5px 0
+        padding: 0 0 5px 0
+        &:last-child
+          background: none
+        .archivedate
+          text-indent: 0
+          margin: 0
+          padding: 0
+          .toggle, .post-count
+            display: none
+          .post-count-link
+            display: block
+            font-size: 17px
+            padding: 5px 0
+          &.expanded
+            background: none
+            .post-count-link
+              font-weight: bold
+              background: #555
+              color: #fff
+              margin-bottom: 8px
+            .hierarchy
+              background: none
+              padding: 0
+              margin: 0
+              .archivedate
+                padding: 5px 0
+                .post-count-link
+                  font-size: 11px
+                  background: none
+                  color: #444
+                  display: inline 
+                  margin: 0
+                  font-weight: normal         
+                .post-count
+                  font-weight: normal         
+                  font-size: 11px
+                  display: inline
+                  color: #aaa
+                &.expanded
+                  background: #ccc
+                  .post-count
+                    color: #fff
+  .widget.LinkList
+    .widget-content
+      @extend .josefin
+      text-align: center
+      margin-top: 18px
+      ul
+        margin: 0
+        padding: 0
+        li
+          height: 20px
+          line-height: 20px
+
+#coc #cic #content h3.upper
+  @extend .josefin
+  background: image-url('h3-bg.png') no-repeat
+  color: #fff
+  font-size: 12px
+  font-weight: bold
+  height: 25px
+  line-height: 28px
+  text-align: center
+  letter-spacing: 3px

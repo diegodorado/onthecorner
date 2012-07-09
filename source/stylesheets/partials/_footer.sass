@@ -1,0 +1,76 @@
+@import "footer-icon/*.png"
+$footer-icon-sprite-dimensions: true
+
+#foc
+  background: #000
+  color: #fff
+
+#fic
+  @extend .josefin
+  font-size: 12px
+
+  padding: 39px 0 77px 0
+  .top
+    padding-bottom: 8px
+    border-bottom: 4px solid #fff
+    margin-bottom: 28px
+    overflow: hidden
+    .left
+      float: left
+      width: 822px
+      .logo
+        float: left
+        background: image-url('footer-logo.png')
+        display: block
+        width: image-width('footer-logo.png')
+        height: image-height('footer-logo.png')
+      .footer-links
+        float: left
+        margin-top: 22px
+        margin-left: 62px
+        a
+          padding: 8px 34px
+          display: block
+          height: 10px
+          line-height: 10px
+    .right
+      float: right
+      width: 164px
+      h2
+        @extend .yeseva
+        background: image-url('h2-bg.png') center bottom no-repeat
+        height: 25px
+        line-height: 25px
+        margin-bottom: 13px
+      ul
+        overflow: hidden
+        li
+          +all-footer-icon-sprites
+          float: left
+          margin-right: 4px
+          &.last
+            margin-right: 0
+          a
+            display: block
+  .bottom
+    overflow: hidden
+    font-size: 10px
+    .left
+      float: left
+      text-align: left
+      width: 822px
+      .copyright
+        height: 29px
+        line-height: 29px
+        
+    .right
+      float: right
+      width: 164px
+      a
+        background: image-url('fic-bottom-a-bg.png') no-repeat right center
+        display: block
+        padding: 13px 46px 8px 0
+        height: 8px
+        line-height: 8px
+        text-align: right
+      

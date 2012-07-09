@@ -1,0 +1,49 @@
+<b:includable id='post' var='post'>
+  <div class='post-labels'>
+    <b:loop values='data:post.labels' var='label'><div expr:class='data:label.name'/></b:loop>
+  </div>    
+  <div class='post hentry'>
+    <a expr:name='data:post.id'/>
+    <div class="timestamp">
+      <data:post.timestamp/>
+    </div>
+    <h3 class="upper"></h3>
+    <h2 class="upper"><a expr:href='data:post.url'><data:post.title/></a></h2>
+    <div class='post-body'>
+      <data:post.body/>
+    </div>
+    <b:if cond='data:post.hasJumpLink'>
+      <div class='jump-link'>
+        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'>ver más</a>
+      </div>
+    </b:if>
+    <h2 class="lower"><a expr:href='data:post.url'><data:post.title/></a></h2>
+    <h3 class="lower"><a expr:href='data:post.url'></a></h3>
+    <div class="share-comments">
+      <div class="buttons">
+        <a href="" class="share">
+          <span class="icon"></span>
+          <span class="label">compartir</span>
+        </a>          
+        <a expr:href='data:post.url' class="comments">
+          <span class="icon"><data:post.numComments/></span>
+          <span class="label">comentario<b:if cond='data:post.numComments != 1'>s</b:if></span>
+        </a>
+      </div>
+      <div class="share-links">
+        <a class='twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' title='compartir en twitter' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">twitter</span>
+        </a>
+        <a class='facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' title='compartir en facebook' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">facebook</span>
+        </a>
+        <a class='mail' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' title='compartir por email' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">mail</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</b:includable>

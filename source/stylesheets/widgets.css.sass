@@ -1,0 +1,46 @@
+@import partials/base
+@import compass/reset
+@import partials/reset
+
+html
+  overflow: hidden
+  
+body
+  font-family: georgia
+  color: #444
+  font-size: 12px
+
+.section
+  margin: 0
+
+
+.most-commented
+  h2
+
+    @extend .yeseva
+    text-align: center
+    color: #000
+    font-size: 12px
+    letter-spacing: 3px
+
+
+    background: #131313 image-url('popular-posts-h2-bg.png') center top no-repeat
+    color: #fff
+    height: 60px
+    line-height: 22px
+    padding: 60px 0 30px
+  ul
+    padding: 0
+    li
+      border-top: 1px dashed #ccc
+      margin-top: 10px
+      padding: 11px 0 0 0
+      a
+        display: block
+        border: 1px solid #ccc
+        padding: 6px
+        background: image-url('loading.gif') no-repeat center center          
+        img
+          display: block
+          padding: 0
+

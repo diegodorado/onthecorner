@@ -1,0 +1,90 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import partials/base
+@import compass/reset
+@import partials/reset
+@import partials/footer
+@import partials/menu
+@import partials/widgets
+@import partials/comments
+@import partials/archive
+@import partials/pager
+@import partials/post
+@import partials/static
+
+body
+  background: #000
+  #navbar
+    height: 0px
+    visibility: hidden
+    display: none
+
+
+#hoc,#coc, #foc
+  min-width: 986px
+  width: 100%
+  text-align: center
+
+#hic,#cic, #fic
+  margin: 0 auto
+  clear: both
+  width: 986px
+  
+#coc
+  background: #fff
+  
+  
+#saw
+  background: transparent image-url('saw-bg.png') repeat-x center top
+  height: image-height('saw-bg.png')
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 1000
+#hoc
+  height: image-height('saw-bg.png')
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 999
+  #hic
+    .left, .center, .right
+      height: image-height('saw-bg.png')
+      float: left
+      overflow: hidden
+    .left
+      background: #fff
+      margin-right: 93px
+      width: 160px
+    .center
+      margin-right: 93px
+      width: 480px
+    .right
+      width: 160px
+
+#content
+  overflow: hidden
+  text-align: left
+  .left, .center, .right
+    padding-top: 56px
+    float: left
+    overflow: hidden
+  .left
+    background: #fff
+    margin-right: 93px
+    padding-top: 276px
+    width: 160px
+  .center
+    margin-right: 93px
+    width: 480px
+  .right
+    width: 160px
+
+.status-message
+  border: 1px solid #ccc
+  background: #e7e7e7
+  padding: 15px
+  text-align: center
+  a
+    display: block
+    margin-top: 10px
+    text-decoration: underline    

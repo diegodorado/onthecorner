@@ -1,0 +1,189 @@
+@import "compass/css3/transition"
+@import "compass/css3/opacity"
+@import "share/*.png"
+$share-sprite-dimensions: true
+
+.box_rotate90
+  -webkit-transform: rotate(90deg)
+  -moz-transform: rotate(90deg)
+  -ms-transform: rotate(90deg)
+  -o-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+.box_transition
+  -webkit-transition: all 0.5s ease-out
+  -moz-transition: all 0.5s ease-out
+  -ms-transition: all 0.5s ease-out
+  -o-transition: all 0.5s ease-out
+  transition: all 0.5s ease-out
+
+#coc #cic #content
+  .post-outer
+    border-bottom: 2px solid #534741
+    padding-bottom: 3px
+    &:last-child
+      border: 0
+      .hentry
+        border: 0
+    .post-labels
+      display: none
+    .hentry
+      border-bottom: 1px solid #bfc2bf
+      .post-body
+        color: #656565
+        letter-spacing: 1px
+        img
+          display: block !important
+          width: 480px !important
+          height: auto !important
+        a
+          margin: 0 !important
+          padding: 0 !important
+          &[name=more]
+            border-top: 1px solid #bfc2bf
+            border-bottom: 1px solid #534741
+            height: 3px
+            display: block
+            margin: 30px 0 10px !important
+            text-indent: -999px
+            width: 100%  
+        span[style*=large]  
+          color: #999
+          font-size: 19px !important
+          font-style: italic
+          letter-spacing: 1px
+        iframe
+          margin-bottom: 38px
+        .separator
+          overflow: hidden
+        .tr-caption-container
+          margin: 0 !important
+          padding: 0 !important
+          .tr-caption
+            display: none
+      .timestamp
+        color: #999
+        height: 47px
+        line-height: 47px
+        text-align: center
+        font-style: italic
+        text-transform: capitalize
+        letter-spacing: 1px
+      h2.upper,h3.upper,.jump-link
+        display: none
+      h2.upper, h2.lower
+        background: none
+        color: #000
+        font-size: 32px
+        height: auto
+        line-height: 32px
+        width: 100%
+      h2.upper
+        padding: 25px 0
+      h2.lower
+        padding: 30px 0 8px
+      h3.lower, .jump-link
+        @extend .josefin
+        background: image-url('dashed-bg.png') no-repeat top center
+        font-size: 11px
+        font-weight: bold
+        padding: 13px 0 17px
+        text-align: center
+        height: 17px
+        width: 100%
+      .share-comments
+        @extend .josefin
+        text-align: center
+        font-weight: bold
+        font-size: 10px
+        margin-bottom: 38px
+        .buttons, .share-links
+          margin-left: 120px
+          overflow: hidden
+          a, span
+            text-decoration: none
+        .buttons
+          line-height: 27px              
+          a
+            clear: none
+            line-height: inherit
+            margin: 0
+            float: left
+            display: block
+            .icon, .label
+              float: left
+              display: block
+            .label
+              padding: 0 22px 0 8px
+            &.share .icon
+              +share-sprite(share)
+            &.comments .icon
+              +share-sprite(comments)
+            &:hover
+              color: #000
+        .buttons a.share:hover, &.active .buttons a.share
+          .icon
+            @extend .box_rotate90
+            @extend .box_transition
+            
+        .share-links
+          color: #999999
+          line-height: 19px
+          height: 0px
+          +transition-property(height)
+          +transition-duration(500ms)
+          a
+            margin-top: 23px
+            float: left
+            display: block
+            .label
+              padding: 0 7px
+            .icon, .label
+              float: left
+              display: block
+              margin-left: 3px
+            &.twitter .icon
+              +share-sprite(twitter)
+            &.facebook .icon
+              +share-sprite(facebook)
+            &.mail .icon
+              +share-sprite(mail)
+            &:hover
+              color: #444
+        &.active .share-links
+          height: 42px
+      .photo-container
+        position: relative
+        text-decoration: none
+        display: block
+        .caption-wrapper
+          position: absolute
+          bottom: 0
+          display: block
+          height:  80px
+          width: 480px
+          .caption-container
+            position: absolute
+            bottom: 0
+            background: #fff
+            height:  0px
+            width: 480px
+            display: block
+            .caption
+              +opacity(0)
+              @extend .josefin
+              display: block
+              color: #000
+              font-size: 10px
+              text-align: center
+              background: image-url('post-img-caption-bg.png') no-repeat center left
+              height:  40px
+              line-height: 15px
+              padding: 20px 0
+    &.news
+      .hentry
+        h2.upper,h3.upper,.jump-link
+          display: block
+        h2.lower,h3.lower
+          display: none
+

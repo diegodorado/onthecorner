@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>testpage OTC</title>
+  <%= partial 'partials/meta' %>
+  <%= stylesheet_link_tag 'application' %>  
+  <%= stylesheet_link_tag 'print', :media=>'print' %>  
+  <!--[if lt IE 8]>
+    <%= stylesheet_link_tag 'ie', :media=>'print' %>  
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Yeseva+One|Josefin+Sans' rel='stylesheet' type='text/css' />  
+  <link type='text/css' rel='stylesheet' href='http://www.blogger.com/static/v1/widgets/1135444933-widget_css_2_bundle.css' />
+</head>
+<body class="loading index">
+  <%= partial 'partials/header' %>
+  <div id="coc">
+    <div id="cic">
+      <div id="content">
+        <div class="left">
+          <%= partial 'partials/menu' %>
+          <%= partial 'partials/popular' %>
+        </div>
+        <div class="center">
+          <%= partial 'partials/main' %>          
+        </div>
+        <div class="right">
+          <%= partial 'partials/search' %>
+          <%= partial 'partials/follow' %>
+          <%= partial 'partials/archivo' %>
+          <%= partial 'partials/campari' %>
+          <%= partial 'partials/link_list' %>
+        </div>
+        <%= partial 'partials/pager' %>
+      </div>
+    </div>
+  </div>
+  <%= partial 'partials/footer' %>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+    <%= javascript_include_tag 'selectivizr' %>
+  <![endif]-->
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>

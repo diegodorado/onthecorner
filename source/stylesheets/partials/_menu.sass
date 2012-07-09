@@ -1,0 +1,38 @@
+#logo
+  position: fixed
+  background: image-url('menu-bg.png') repeat-x bottom center
+  padding-bottom: image-height('menu-bg.png')
+  top: 6px
+  z-index: 1000
+  a
+    padding-top: 48px
+    display: block
+    background: #fff
+    overflow: hidden
+    span
+      display: block
+      text-indent: -999px
+      background: image-url('logo.png')
+      width: image-width('logo.png')
+      height: image-height('logo.png')
+#menu
+  ul
+    @extend .josefin
+    background: #fff
+    padding-bottom: 39px
+    font-size: 17px
+    li
+      border-bottom: 1px dashed #ccc
+      a
+        padding-left: 5px
+        display: block
+        height: 30px
+        line-height: 32px
+        padding-top: 3px
+        &.active, &:hover
+          background: image-url('menu-active-bg.png') no-repeat right center
+          color: #000
+          text-decoration: none
+      &.last  
+        border-bottom: 0
+      

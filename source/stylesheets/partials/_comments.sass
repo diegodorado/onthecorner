@@ -1,0 +1,42 @@
+#coc #cic #content #comments
+  .comments-list
+    margin: 0
+    padding: 0
+    li
+      .comment-title
+        padding-bottom: 4px
+        margin-bottom: 9px
+        border-bottom: 1px dashed #ccc
+        .author
+          color: #c85e2d
+          font-size: 14px
+          font-weight: bold
+        .timestamp
+          color: #aaa
+          font-style: italic
+      .comment-body
+        margin: 0 0 26px 0
+        color: #777
+        font-size: 12px
+        line-height: 18px
+  > .comment-footer
+    border-top: 4px solid #000
+    margin: 34px 0 0
+    padding: 3px 0 0    
+  .comment-form
+    max-width: none
+    border: 1px dashed #929090
+    padding: 20px 18px
+    #comment-post-message
+      @extend .yeseva
+      height: 25px
+      line-height: 25px
+      text-align: center
+      
+    iframe
+      height: 240px
+      input, textarea
+        background: #f0f0f0
+        border: 1px solid #929090
+      
+

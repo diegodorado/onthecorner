@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="MOST COMMENTED" >
+    <Require feature="setprefs" />
+  </ModulePrefs>  
+  <UserPref name="year" display_name="Anio" required="true" />   
+  <UserPref name="month" display_name="Mes" datatype="enum" >   
+      <EnumValue value="0" display_value="(todos)" />
+      <EnumValue value="1" display_value="Enero" />
+      <EnumValue value="2" display_value="Febrero" />
+      <EnumValue value="3" display_value="Marzo" />
+      <EnumValue value="4" display_value="Abril" />
+      <EnumValue value="5" display_value="Mayo" />
+      <EnumValue value="6" display_value="Junio" />
+      <EnumValue value="7" display_value="Julio" />
+      <EnumValue value="8" display_value="Agosto" />
+      <EnumValue value="9" display_value="Septiembre" />
+      <EnumValue value="10" display_value="Octubre" />
+      <EnumValue value="11" display_value="Noviembre" />
+      <EnumValue value="12" display_value="Diciembre" />
+  </UserPref>
+  <UserPref name="posts_count" display_name="Cantidad de Entradas" datatype="enum" required="true" >   
+      <EnumValue value="2" />
+      <EnumValue value="3" />
+      <EnumValue value="4" />
+      <EnumValue value="5" />
+      <EnumValue value="6" />
+      <EnumValue value="7" />
+      <EnumValue value="8" />
+      <EnumValue value="9" />
+      <EnumValue value="10" />
+  </UserPref>
+  <Content type="html"> 
+  <![CDATA[ 
+    <link href="http://fonts.googleapis.com/css?family=Yeseva+One|Josefin+Sans" rel="stylesheet" type="text/css" />
+    <link href="http://onthecorner.com.ar/assets/stylesheets/widgets.css" media="screen" rel="stylesheet" type="text/css" />  
+    <script src="http://onthecorner.com.ar/assets/javascripts/widgets.js?v=2" type="text/javascript"></script>    
+    <div class="most-commented">
+	    <h2></h2>
+	    <ul></ul>
+    </div>
+  ]]> 
+  </Content>
+</Module>

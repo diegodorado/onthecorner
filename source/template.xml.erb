@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="en" b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+    <%= partial 'partials/meta' %>
+    <link href="http://onthecorner.com.ar/assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />  
+    <link href="http://onthecorner.com.ar/assets/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />  
+    <!--[if lt IE 8]>
+      <link href="http://onthecorner.com.ar/assets/stylesheets/ie.css" media="print" rel="stylesheet" type="text/css" />  
+    <![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=Yeseva+One|Josefin+Sans" rel="stylesheet" type="text/css" />
+    <b:skin></b:skin>
+    <b:template-skin></b:template-skin>
+  </head>
+  <body expr:class='&quot; loading &quot;  + data:blog.pageType'>
+    <%= partial 'partials/header' %>
+    <div id="coc">
+      <div id="cic">
+        <div id="content">
+          <div class="left">
+            <%= partial 'partials/menu' %>
+            <%= partial 'sections/left' %>
+          </div>
+          <div class="center">
+            <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+              <%= partial 'sections/archive' %>
+            <b:else/>
+              <%= partial 'sections/main' %>
+            </b:if>
+          </div>
+          <div class="right">
+            <%= partial 'sections/right' %>
+          </div>
+          <%= partial 'partials/pager' %>
+        </div>
+      </div>
+    </div>
+    <%= partial 'partials/footer' %>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="http://onthecorner.com.ar/assets/javascripts/selectivizr.js" type="text/javascript"></script>
+    <![endif]-->    
+    <script src="http://onthecorner.com.ar/assets/javascripts/application.js" type="text/javascript"></script>
+  </body>
+</html>
