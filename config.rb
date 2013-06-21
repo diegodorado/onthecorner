@@ -39,6 +39,7 @@ end
 # Per-page layout changes:
 # 
 # With no layout
+page "/pantene.html", :layout => false
 page "/test.html", :layout => false
 page "/widget_test.html", :layout => false
 page "/template.xml", :layout => false
@@ -61,6 +62,25 @@ page "/most_commented.xml", :layout => false
 # Helpers
 ###
 
+
+
+module MyAssetHandler
+  class << self
+    def registered(app)
+      app.send :include, InstanceMethods
+    end
+    alias :included :registered
+  end
+
+  module InstanceMethods
+    def asset_url(path, prefix="")
+      original = super(path, prefix)
+      #"http://localhost:4567" + original
+      "http://onthecorner.com.ar/assets" + original
+    end
+  end
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -80,7 +100,7 @@ page "/most_commented.xml", :layout => false
 # Build-specific configuration
 configure :build do
 
-
+  activate MyAssetHandler
 
   compass_config do |config|
     config.output_style = :compact

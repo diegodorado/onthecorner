@@ -1,0 +1,51 @@
+﻿pantene_160x400.swf Movie Report
+---------------------------------
+
+Metadata
+--------
+Bytes         Value
+----------    -----
+      1054    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> <xmp:CreatorTool>Adobe Flash Professional CS5.5 - build 325</xmp:CreatorTool> <xmp:CreateDate>2013-04-05T15:46:29-03:00</xmp:CreateDate> <xmp:MetadataDate>2013-06-21T00:36:07-03:00</xmp:MetadataDate> <xmp:ModifyDate>2013-06-21T00:36:07-03:00</xmp:ModifyDate> </rdf:Description> <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> <dc:format>application/x-shockwave-flash</dc:format> </rdf:Description> <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"> <xmpMM:InstanceID>xmp.iid:9054E12C102068118C14C7DC261211E0</xmpMM:InstanceID> <xmpMM:DocumentID>xmp.did:9054E12C102068118C14C7DC261211E0</xmpMM:DocumentID> <xmpMM:OriginalDocumentID>xmp.did:CDC174A7149EE211A12FECCD7F9B77F8</xmpMM:OriginalDocumentID> <xmpMM:DerivedFrom rdf:parseType="Resource"> <stRef:instanceID>xmp.iid:01801174072068118C14C7DC261211E0</stRef:instanceID> <stRef:documentID>xmp.did:2A312EC147D8E2118AE6C9AE9C13D57B</stRef:documentID> <stRef:originalDocumentID>xmp.did:CDC174A7149EE211A12FECCD7F9B77F8</stRef:originalDocumentID> </xmpMM:DerivedFrom> </rdf:Description> </rdf:RDF> 
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    -----
+      1          37757          37757    Scene 1 (AS 2.0 Classes Export Frame)
+
+Scene      Shape Bytes    Text Bytes    ActionScript Bytes
+-------    -----------    ----------    ------------------
+Scene 1            184             0                  1850
+
+Symbol         Shape Bytes    Text Bytes    ActionScript Bytes
+-----------    -----------    ----------    ------------------
+test                     0             0                     0
+copy10                 481            50                     0
+CLICKTAG                33             0                     0
+MC-BOTON                29            42                     0
+MC-BOTON-bg             60             0                     0
+MC-copy2                 0           126                     0
+MC-courtney              0             0                     0
+MC-Copy0                 0           112                     0
+MC-LOGO                  0             0                     0
+MC-pack                204             0                     0
+MC-PACKS                 0             0                     0
+
+Font Name    Bytes         Characters
+---------    ----------    ----------
+Helvetica          2364     .0156?ABCDEGILMNOPRSTUV ¿ÁÉÍ
+
+ActionScript Bytes    Location
+------------------    --------
+              1804    Scene 1:as:1
+                46    Scene 1:button:1:No instance name assigned(CLICKTAG)
+              4060    ActionScript 2.0 Classes
+
+Bitmap                           Compressed    Original      Compression
+-----------------------------    ----------    ----------    -----------
+260x800_courtney.jpg                   9756        393120    JPEG Quality=70
+260x800_bg.jpg                         8266        454480    JPEG Quality=65
+bc10_500x500_pack.jpg                  6400        141316    JPEG Quality=70
+300x600_vogue_export_logo.gif          2001          8960    Lossless
+
+
+
+

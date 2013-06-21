@@ -1,0 +1,44 @@
+Placement Details: 
+Placement ID: 7244112 
+Agency: Mediacom MIAMI 
+Campaign: P&G - LatAm_Pantene_Carver_2013 
+Campaign ID: 307273 
+Site: On The Corner - Homepage 
+Placement Name: AR_on_the_corner_400x150
+Placement Format Type: Tracking Only
+Booked Impressions: 138000 
+Placement Dates:
+06/06/2013 11:00:00 p.m. - 30/06/2013 10:59:00 p.m.
+
+//To track Impressions use the following URL:
+http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=7244112&PluID=0&ord=[timestamp]&rtu=-1
+
+//To track Clicks use the following URL:
+//Note: Please ensure that you implement a click tracking URL only in the clicks location in your ad server, 
+//and an impression tracking URL only in the impression tracking location.
+//Incorrect implementation of these URLs will result in major billing and reporting discrepancies.
+http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=7244112&PluID=0&ord=[timestamp]
+
+====================================================
+Placement Details: 
+Placement ID: 7253913 
+Agency: Mediacom MIAMI 
+Campaign: P&G - LatAm_Pantene_Carver_2013 
+Campaign ID: 307273 
+Site: On The Corner - Homepage 
+Placement Name: AR_on_the_corner_400x150
+Placement Format Type: Tracking Only
+Booked Impressions: 138000 
+Placement Dates:
+06/06/2013 11:00:00 p.m. - 30/06/2013 10:59:00 p.m.
+
+//To track Impressions use the following URL:
+http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=7253913&PluID=0&ord=[timestamp]&rtu=-1
+
+//To track Clicks use the following URL:
+//Note: Please ensure that you implement a click tracking URL only in the clicks location in your ad server, 
+//and an impression tracking URL only in the impression tracking location.
+//Incorrect implementation of these URLs will result in major billing and reporting discrepancies.
+http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=7253913&PluID=0&ord=[timestamp]
+
+====================================================

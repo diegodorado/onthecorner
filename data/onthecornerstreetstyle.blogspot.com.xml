@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="en" b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="author" content="diego@cooperativahormigon.com.ar" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link href="http://www.onthecorner.com.ar/assets/css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="http://www.onthecorner.com.ar/assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+    <link href="http://www.onthecorner.com.ar/assets/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Yeseva+One|Josefin+Sans' rel='stylesheet' type='text/css' />
+
+    <b:skin></b:skin>
+    <b:template-skin></b:template-skin>
+  </head>
+  <body expr:class='&quot; loading &quot;  + data:blog.pageType'>
+    <div id="saw"></div>
+<div id="hoc">
+  <div id="hic">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</div>
+
+
+    <div id="coc">
+      <div id="cic">
+        <div id="content">
+          <div class="left">
+            <div id="logo">
+  <a href="/" class="logo"><span>on the corner</span></a>
+</div>
+<div id="menu">
+  <ul>
+    <li><a class="proyecto" href="/p/proyecto.html">PROYECTO</a></li>  
+    <li><a class="prensa" href="/search/label/prensa">PRENSA</a></li>  
+    <li><a class="especiales" href="/search/label/especiales%20otc">ESPECIALES</a></li>  
+    <li><a class="archive" href="">ARCHIVO</a></li>  
+    <li class="last"><a class="contact" href="mailto:hola@onthecorner.com.ar">CONTACTO</a></li>  
+  </ul>
+</div>
+
+            <b:section class='sidebar-left' id='sidebar-left' preferred='no'>
+  <b:widget id='PopularPosts1' locked='false' title='Popular posts' type='PopularPosts'>
+  <b:includable id='main'>
+    <div class='widget-content popular-posts widget-test'>
+      <h2>los 10 más<br/>comentados<br/>de OTC</h2>
+      <ul>
+      </ul>
+      <b:include name='quickedit'/>
+    </div>
+  </b:includable>
+</b:widget>
+
+
+
+</b:section>
+
+          </div>
+          <div class="center">
+            <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+              <h3 class="upper">archivo</h3>
+<h1></h1>
+<ul id="archive_list"></ul>
+
+
+            <b:else/>
+              <b:section class='main' id='main' showaddelement='no'>
+  <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog'>
+    <b:includable id='status-message'>
+  <b:if cond='data:navMessage'>
+    <div class='status-message' style='display:none'>
+      <data:navMessage/>
+    </div>
+  </b:if>
+</b:includable>
+
+    <b:includable id='post' var='post'>
+  <div class='post-labels'>
+    <b:loop values='data:post.labels' var='label'><div expr:class='data:label.name'/></b:loop>
+  </div>    
+  <div class='post hentry'>
+    <a expr:name='data:post.id'/>
+    <div class="timestamp">
+      <data:post.timestamp/>
+    </div>
+    <h3 class="upper"></h3>
+    <h2 class="upper"><a expr:href='data:post.url'><data:post.title/></a></h2>
+    <div class='post-body'>
+      <data:post.body/>
+    </div>
+    <b:if cond='data:post.hasJumpLink'>
+      <div class='jump-link'>
+        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'>ver más</a>
+      </div>
+    </b:if>
+    <h2 class="lower"><a expr:href='data:post.url'><data:post.title/></a></h2>
+    <h3 class="lower"><a expr:href='data:post.url'></a></h3>
+    <div class="share-comments">
+      <div class="buttons">
+        <a href="" class="share">
+          <span class="icon"></span>
+          <span class="label">compartir</span>
+        </a>          
+        <a expr:href='data:post.url' class="comments">
+          <span class="icon"><data:post.numComments/></span>
+          <span class="label">comentario<b:if cond='data:post.numComments != 1'>s</b:if></span>
+        </a>
+      </div>
+      <div class="share-links">
+        <a class='twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' title='compartir en twitter' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">twitter</span>
+        </a>
+        <a class='facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' title='compartir en facebook' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">facebook</span>
+        </a>
+        <a class='mail' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' title='compartir por email' target='_blank'>
+          <span class="icon"></span>
+          <span class="label">mail</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</b:includable>
+
+    <b:includable id='comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'>dejanos tu comentario</h4>
+    <p><data:blogCommentMessage/></p>
+    <data:blogTeamBlogMessage/>
+    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+    <iframe allowtransparency='false' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.friendConnectJs/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+    </script>
+  </div>
+</b:includable>
+
+    <b:includable id='comments' var='post'>
+  <div class='comments' id='comments'>
+    <a name='comments'/>
+    <b:if cond='data:post.allowComments'>
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <ul class="comments-list">
+          <b:loop values='data:post.comments' var='comment'>
+            <li>
+              <div class="comment-title">
+                <span class="author"><data:comment.author/>, </span>
+                <span class="timestamp"><data:comment.timestamp/></span>
+              </div>
+              <div class="comment-body">
+                <b:if cond='data:comment.isDeleted'>
+                  <span class='deleted-comment'><data:comment.body/></span>
+                <b:else/>
+                  <p>
+                    <data:comment.body/>
+                  </p>
+                </b:if>
+              </div>
+            </li>
+          </b:loop>
+        </ul>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <div class='paging-control-container'>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+            <data:post.oldestLinkText/>
+          </a>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+            <data:post.olderLinkText/>
+          </a>
+          &#160;
+          <data:post.commentRangeText/>
+          &#160;
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+            <data:post.newerLinkText/>
+          </a>
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+            <data:post.newestLinkText/>
+          </a>
+        </div>
+      </b:if>
+
+      <div class='comment-footer'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='comment-form'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+      </div>
+    </b:if>
+
+  </div>
+</b:includable>
+
+    <b:includable id='nextprev'>
+  <div id='blog-pager' style='display:none'>
+    <b:if cond='data:newerPageUrl'>
+      <a class='newer' expr:href='data:newerPageUrl' />
+    </b:if>
+    <b:if cond='data:olderPageUrl'>
+      <a class='older' expr:href='data:olderPageUrl' />
+    </b:if>
+  </div>
+</b:includable>
+
+    <b:includable id='main' var='top'>
+      <b:include name='nextprev'/>
+      <b:include data='top' name='status-message'/>
+      <b:loop values='data:posts' var='post'>
+        <div class='post-outer'>
+        <b:include data='post' name='post'/>
+        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+          <b:include data='post' name='comments'/>
+        </b:if>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+          <b:include data='post' name='comments'/>
+        </b:if>
+        </div>
+      </b:loop>
+    </b:includable>
+  </b:widget>
+</b:section>
+
+            </b:if>
+          </div>
+          <div class="right">
+            <b:section class='sidebar-right-top' id='sidebar-right-top' preferred='yes' showaddelement='yes'>
+  <b:widget id='HTML1' locked='true' title='Search' type='HTML'>
+  <b:includable id='main'>
+    <div class="widget-content search">
+      <form method="get" action="/search">
+        <button>search</button>
+        <input placeholder="BUSCAR" type="text" name="q" />
+      </form>
+      </div>
+  </b:includable>
+</b:widget>
+
+
+  <b:widget id='HTML2' locked='false' title='Seguinos' type='HTML'>
+  <b:includable id='main'>
+    <div class="widget-content follow">
+      <h2>SEGUINOS</h2>
+      <ul>
+        <li><a class="follow-rss" href="/feeds/posts/default" target="_blank"></a></li>
+        <li><a class="follow-twitter" href="https://twitter.com/OnTheCornerbsas" target="_blank"></a></li>
+        <li><a class="follow-youtube" href="http://www.youtube.com/user/somosOnTheCorner" target="_blank"></a></li>
+        <li><a class="follow-facebook" href="http://www.facebook.com/pages/OnTheCorner/129624337067191" target="_blank"></a></li>
+        <li class="last"><a class="follow-bloglovin" href="http://www.bloglovin.com/blog/195452/on-the-corner---buenos-aires-street-sty" target="_blank"></a></li>
+      </ul>
+    </div>
+  </b:includable>
+</b:widget>
+
+
+  <b:widget id='BlogArchive1' locked='true' title='Archivo' type='BlogArchive'/>
+  <b:widget id='LinkList1' locked='true' title='Street Style' type='LinkList'/>
+  <b:widget id='Image1' locked='true' type='Image'/>
+</b:section>
+
+
+
+          </div>
+          <ul id="pager" style="display:none">
+  <li class='home'><a href='/'>inicio</a></li>
+  <li class='newer'>
+    <a href='' title='entradas recientes'><strong>&lt;</strong>entradas recientes</a>
+  </li>
+	<li class="page-links"></li>
+  <li class='older'>
+    <a href='' title='entradas antiguas'>entradas antiguas<strong>&gt;</strong></a>
+  </li>
+  <li class='archive'><a href="">archivo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+    <div id="foc">
+  <div id="fic">
+    <div class="top">
+      <div class="left">
+        <a href="" class="logo"></a>
+        <div class="footer-links">
+          <table>
+	          <tr>
+		          <td><a href="/p/terminos-y-condiciones.html">TERMINOS Y CONDICIONES</a></td>
+		          <td><a href="/p/faqs.html">FAQS</a></td>
+		          <td><a href="/search/label/prensa">PRENSA</a></td>
+	          </tr>
+	          <tr>
+		          <td><a href="/p/politicas-de-privacidad.html">POLITICAS DE PRIVACIDAD</a></td>
+		          <td><a href="mailto:hola@onthecorner.com.ar">CONTACTO</a></td>
+		          <td><a href="/p/proyecto.html">QUÉ ES ON THE CORNER?</a></td>
+	          </tr>
+          </table>
+        </div>
+      </div>
+      <div class="right">
+        <h2>SEGUINOS</h2>
+        <ul>
+	        <li><a class="footer-icon-rss" href="/feeds/posts/default" target="_blank"></a></li>
+	        <li><a class="footer-icon-twitter" href="https://twitter.com/OnTheCornerbsas" target="_blank"></a></li>
+	        <li><a class="footer-icon-youtube" href="http://www.youtube.com/user/somosOnTheCorner" target="_blank"></a></li>
+	        <li><a class="footer-icon-facebook" href="http://www.facebook.com/pages/OnTheCorner/129624337067191" target="_blank"></a></li>
+	        <li class="last"><a class="footer-icon-bloglovin" href="http://www.bloglovin.com/blog/195452/on-the-corner---buenos-aires-street-sty" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <div class="copyright">
+          <span>© ON THE CORNER, TODOS LOS DERECHOS RESERVADOS. OTC es realizado por </span>
+          <a href="http://www.esoesmuyflora.blogspot.com/">Flora Grzetic</a>
+          <span> y </span>
+          <a href="http://www.javiobando.com/">Javi Obando</a>
+        </div>
+      </div>
+      <div class="right">
+        <a href="http://www.entrecasaestudio.com.ar/" target="_blank">diseño</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="http://www.onthecorner.com.ar/assets/js/jquery-1.6.2.min.js"></script> 
+<script type="text/javascript" src="http://www.onthecorner.com.ar/assets/js/jquery-ui-1.8.15.min.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="http://www.onthecorner.com.ar/assets/js/selectivizr.js"></script>
+<![endif]-->
+<script type="text/javascript" src="http://www.onthecorner.com.ar/assets/js/site.js"></script> 
+
+  </body>
+</html>

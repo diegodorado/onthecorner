@@ -1,0 +1,123 @@
+-*- mode: outline; coding: utf-8; fill-column: 80 -*-
+
+* Timestamp.
+
+2010-12-04
+
+* About brain-break-blog project.
+
+'brain-break-blog' project store personal Blogger templates and Makefile which
+allow automatic templates uploading/downloading.
+
+Note that Makefile does not restricted by my Blogger account and can work with
+any blogs.
+
+Currently project hosted at:
+
+  http://code.google.com/p/brain-break-blog
+
+* How use Makefile.
+
+** What you need to make it work?
+
+ * POSIX utilities
+ * GNU Make
+ * xsltproc
+ * curl
+ * tidy
+
+I recommend install Cygwin to obtain these utilities under Windows.
+
+** Getting help from Makefile.
+
+Makefile contain a lot of internal docs. Check it.
+
+Also Makefile support 'help' target (mostly useful is printing of available
+targets):
+
+  $ make help
+...
+
+** Login to Blogger.
+
+Before any things you must login to blogger service.
+
+To make this create 'Makefile.config' with such content:
+
+  $ cat Makefile.config
+GOOGLE_USER = ...       # google account without @gmail.com
+GOOGLE_PASSWORD = ...   # your google password
+
+When you put password and before any make invocation
+I recommend check Makefile for malicious code ))
+
+Also you can change identity of client (in our case it is Makefile) by setting
+CLIENT_ID (may be Blogger service used it for gathering statistics or in
+Firewall to stop attacks??):
+
+  $ cat Makefile.config
+...
+CLIENT_ID = myhome-makefile-1  # in form companyName-applicationName-versionID
+
+Next run:
+
+  $ make login
+
+** First time.
+
+You must store your template in same dir as Makefile in file with proper name.
+
+To create stabs execute:
+
+  $ make create-template-stubs
+
+Above command does not damage any already created templates.
+
+Next you can overwrite templates with remote ones (which stored on Google server):
+
+  $ make overwrite-template
+
+Above command overwrite your template, be careful!
+
+** Download templates.
+
+When you have all '*.blogspot.com.xml' files you can request download template by:
+
+  $ make get-template
+
+After above command in 'web' dir you can found many interesting files.
+'*-template.xml' are your templates.
+
+** Upload templates.
+
+After editing templates from '*.blogspot.com.xml' files you can upload templates
+to Blogger servers:
+
+  $ make upload-template
+
+* Docs about blogger templates.
+
+  http://www.google.com/support/blogger/bin/topic.py?topic=12449
+                About Layouts (here some links to useful docs).
+  http://www.google.com/support/blogger/bin/answer.py?answer=46995
+                Widget Tags for Layouts
+  http://www.google.com/support/blogger/bin/answer.py?answer=46888
+                Page Elements Tags for Layouts
+
+  https://groups.google.com/group/blogger-template-design/web
+                Blogger Template Design Group
+
+* How debug?
+
+  $ sudo tcpdump -A -s 0 -i eth0 dst or src host <hostname> and port 80
+
+  http://code.google.com/apis/gdata/articles/wireshark.html
+                On the Wire: Network Capture Tools for API Developers
+  http://www.wireshark.org/
+                WireShark is a graphical tool built with libpcap, the same
+                library that tcpdump is built on, and is available on Linux,
+                Mac OS X, and Windows.
+  http://www.winpcap.org/windump/
+                WinDump is the Windows version of tcpdump, the command line
+                network analyzer for UNIX
+

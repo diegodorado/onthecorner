@@ -1,0 +1,51 @@
+﻿pantene400x160_bc10.swf Movie Report
+-------------------------------------
+
+Metadata
+--------
+Bytes         Value
+----------    -----
+       787    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> <xmp:CreatorTool>Adobe Flash CS4 Professional</xmp:CreatorTool> <xmp:CreateDate>2013-04-07T15:24:11-02:00</xmp:CreateDate> <xmp:MetadataDate>2013-05-29T12:33:55-03:00</xmp:MetadataDate> <xmp:ModifyDate>2013-05-29T12:33:55-03:00</xmp:ModifyDate> </rdf:Description> <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> <dc:format>application/x-shockwave-flash</dc:format> </rdf:Description> <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"> <xmpMM:InstanceID>xmp.iid:EA9CAE4B73C8E211A9FAB65D3B32FA90</xmpMM:InstanceID> <xmpMM:DocumentID>xmp.did:EA9CAE4B73C8E211A9FAB65D3B32FA90</xmpMM:DocumentID> <xmpMM:OriginalDocumentID>xmp.did:E7D8D9FEA89FE211AF14EF0656807A3F</xmpMM:OriginalDocumentID> <xmpMM:DerivedFrom rdf:parseType="Resource"> <stRef:instanceID>xmp.iid:E99CAE4B73C8E211A9FAB65D3B32FA90</stRef:instanceID> <stRef:documentID>xmp.did:E7D8D9FEA89FE211AF14EF0656807A3F</stRef:documentID> <stRef:originalDocumentID>xmp.did:E7D8D9FEA89FE211AF14EF0656807A3F</stRef:originalDocumentID> </xmpMM:DerivedFrom> </rdf:Description> </rdf:RDF> 
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    -----
+      1           3870           3870    Scene 1 (AS 2.0 Classes Export Frame)
+      2           5404           9274    
+
+Scene      Shape Bytes    Text Bytes    ActionScript Bytes
+-------    -----------    ----------    ------------------
+Scene 1            101             0                   624
+
+Symbol             Shape Bytes    Text Bytes    ActionScript Bytes
+---------------    -----------    ----------    ------------------
+BOTON                       24             0                     0
+MC-bgVideo                  24             0                     0
+MC-ConoceMas                22            42                     0
+MC-conoceMas_bg             35             0                     0
+MC-copy21                    0            64                     0
+MC-LOGO                      0             0                     0
+MC-STATUS                   97             0                     1
+MC-VACIO                     0             0                   835
+PLAYPAUSA                   24             0                     0
+
+Font Name                    Bytes         Characters
+-------------------------    ----------    ----------
+ProximaNova-Semibold Bold           630     CMNOS ÁÉ
+ProximaNova-Bold Bold               519     ?MORU 
+ProximaNova-Regular                 679     ADELNRST ¿
+
+ActionScript Bytes    Location
+------------------    --------
+               597    Scene 1:as:2
+                27    Scene 1:boton:2:No instance name assigned(BOTON)
+               835    MC-VACIO:Layer 2:1
+                 1    MC-STATUS:Layer 3:1
+              3062    ActionScript 2.0 Classes
+
+Bitmap                           Compressed    Original      Compression
+-----------------------------    ----------    ----------    -----------
+antesDespues_300x250_logo.gif          1267          5632    Lossless
+
+
+
+
